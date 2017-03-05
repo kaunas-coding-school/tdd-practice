@@ -15,5 +15,7 @@ class FileLoaderTest extends PHPUnit_Framework_TestCase
         $this->assertEquals("Foo\n", $r);
     }
 
-    // parasykime testa patikrinimui, jei tokio failo nera
+    // parasykime testa patikrinimui, jei failas neegzistuoja
+    // musu metodas turetu grazinti false tokiu atveju
+    // galime panaudoti assertFalse
 }
