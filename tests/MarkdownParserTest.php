@@ -26,5 +26,6 @@ class MarkdownParserTest extends PHPUnit_Framework_TestCase
     }
 
     // parasykime metoda siam testui
+    // galime naudoti regexp '/\[(.*)\]\((.*)\)/'
 
 }
