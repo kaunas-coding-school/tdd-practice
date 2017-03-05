@@ -18,4 +18,6 @@ class MarkdownParserTest extends PHPUnit_Framework_TestCase
     }
 
     // parasykime metoda siam testui
+    // galime panaudoti regexp /\*\*(.*)\*\*/
+    // taip pat galime panaudoti php preg_replace funkcija
 }
