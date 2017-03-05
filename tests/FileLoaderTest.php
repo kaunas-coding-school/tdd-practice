@@ -21,6 +21,4 @@ class FileLoaderTest extends PHPUnit_Framework_TestCase
         $r = $f->get('file_does_not_exist');
         $this->assertFalse($r);
     }
-    // parasykime koda siam testui
-    // galime panaudoti php file_exists
 }
