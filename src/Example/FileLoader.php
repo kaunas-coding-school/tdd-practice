@@ -4,8 +4,10 @@ namespace Example;
 
 class FileLoader
 {
-    public function testFileLoaderClassCanBeCreated()
+
+    public function get($path)
     {
-        $f = new FileLoader;
+        return file_get_contents($path);
     }
+
 }
