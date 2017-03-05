@@ -25,7 +25,15 @@ class MarkdownParserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('foo<a href="baz">bar</a>boo', $r);
     }
 
-    // Parasykime testa, kuris pakeicia nuotraukas
-    // Nuotraukos zymimos taip ![bar](baz)
+    public function testImagesCanBeParsed()
+    {
+        $m = new MarkdownParser;
 
+        $e = 'foo ![bar](baz) boo';
+        $r = $m->parseImages($e);
+        $this->assertEquals('foo <img src="baz" alt="bar" /> boo', $r);
+    }
+
+    // Parasykime metoda siam testui
+    // Galime panaudoti '/\!\[(.*)\]\((.*)\)/'
 }
