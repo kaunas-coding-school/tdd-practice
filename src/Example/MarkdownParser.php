@@ -7,8 +7,8 @@ class MarkdownParser
     public function parse($source)
     {
         $source = $this->parseBold($source);
-        $source = $this->parseLinks($source);
-        return $this->parseImages($source);
+        $source = $this->parseImages($source);
+        return $this->parseLinks($source);
     }
 
     public function parseBold($source)
