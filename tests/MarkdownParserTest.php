@@ -17,6 +17,14 @@ class MarkdownParserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('foo<strong>bar</strong>baz', $r);
     }
 
-    // Markdown nuorodos aprasomos taip [url](pavadinimas)
-    // Parasykime testa metodui, kuris atlieka nuorodu iskaityma i HTML a zyma
+    public function testLinksCanBeParsed()
+    {
+        $m = new MarkdownParser;
+        $e = 'foo[bar](baz)boo';
+        $r = $m->parseLinks($e);
+        $this->assertEquals('foo<a href="baz">bar</a>boo', $r);
+    }
+
+    // parasykime metoda siam testui
+
 }
