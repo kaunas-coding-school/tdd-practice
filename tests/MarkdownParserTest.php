@@ -25,6 +25,7 @@ class MarkdownParserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('foo<a href="baz">bar</a>boo', $r);
     }
 
-    // parasykime metoda siam testui
+    // Parasykime testa, kuris pakeicia nuotraukas
+    // Nuotraukos zymimos taip ![bar](baz)
 
 }
