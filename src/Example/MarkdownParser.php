@@ -17,4 +17,11 @@ class MarkdownParser
         $replace = '<a href="$2">$1</a>';
         return preg_replace($pattern, $replace, $source);
     }
+
+    public function parseImages($source)
+    {
+        $pattern = '/\!\[(.*)\]\((.*)\)/';
+        $replace = '<img src="$2" alt="$1" />';
+        return preg_replace($pattern, $replace, $source);
+    }
 }
