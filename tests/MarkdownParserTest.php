@@ -9,7 +9,13 @@ class MarkdownParserTest extends PHPUnit_Framework_TestCase
         $m = new MarkdownParser;
     }
 
-    // Kiekviena atskira Markdown pazymejima turime patestuoti individualiai
-    // Dvigub (**) pazymejimai is abieju pusiu turi buti pakeiciami i HTML <strong> pazymejima
-    // Parasykime tam testa
+    public function testBoldTextCanBeParsed()
+    {
+        $m = new MarkdownParser;
+        $e = 'foo**bar**baz';
+        $r = $m->parseBold($e);
+        $this->assertEquals('foo<strong>bar</strong>baz', $r);
+    }
+
+    // parasykime metoda siam testui
 }
