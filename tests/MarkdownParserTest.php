@@ -34,6 +34,7 @@ class MarkdownParserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('foo <img src="baz" alt="bar" /> boo', $r);
     }
 
-    // Parasykim testa metodui parse(), kuris iskviestu visus kitus metodus ir patikrinkim rezultata
+    // Parasykime metoda siam testui
+    // Galime panaudoti '/\!\[(.*)\]\((.*)\)/'
 
 }
