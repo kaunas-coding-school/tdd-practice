@@ -4,6 +4,13 @@ namespace Example;
 
 class MarkdownParser
 {
+    public function parse($source)
+    {
+        $source = $this->parseBold($source);
+        $source = $this->parseLinks($source);
+        return $this->parseImages($source);
+    }
+
     public function parseBold($source)
     {
         $pattern = '/\*\*(.*)\*\*/';
